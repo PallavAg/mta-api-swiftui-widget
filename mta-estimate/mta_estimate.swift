@@ -67,13 +67,7 @@ struct Provider: AppIntentTimelineProvider {
     
     // Determine the appropriate routes and fetch estimates
     func fetchEstimate() async -> ([String], [Route]) {
-        let calendar = Calendar.current
         let now = Date()
-        let components = calendar.dateComponents([.hour, .minute, .weekday], from: now)
-        
-        guard let hour = components.hour, let weekday = components.weekday else {
-            return (["Error fetching time"], [])
-        }
         
         let routes: [Route] = populateRoutes()
 
