@@ -74,13 +74,7 @@ struct ContentView: View {
         var allEstimates: [String] = []
         
         // List of routes to fetch estimates for
-        let routes = [
-            Route(station: "Court Sq (E)", routeId: "E", stopId: "F09S"),
-            Route(station: "Court Sq (M)", routeId: "M", stopId: "F09S"),
-            Route(station: "Court Sq (7)", routeId: "7", stopId: "719S"),
-            Route(station: "Lex 53rd (E)", routeId: "E", stopId: "F11N"),
-            Route(station: "Lex 53rd (M)", routeId: "M", stopId: "F11N")
-        ]
+        let routes = allRoutes
         
         // Fetch estimates for each route
         for route in routes {

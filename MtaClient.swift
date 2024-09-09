@@ -8,11 +8,62 @@
 import Foundation
 import SwiftUI
 
+// Helpers
+let mtaColors: [String: Color] = [
+    "1": .red,
+    "2": .red,
+    "3": .red,
+    "4": .green,
+    "5": .green,
+    "6": .green,
+    "7": .purple,
+    "A": .blue,
+    "C": .blue,
+    "E": .blue,
+    "B": .orange,
+    "D": .orange,
+    "F": .orange,
+    "M": .orange,
+    "G": .green,
+    "J": .brown,
+    "Z": .brown,
+    "L": .gray,
+    "N": .yellow,
+    "Q": .yellow,
+    "R": .yellow,
+    "W": .yellow,
+    "S": .gray // Shuttle
+]
+
 struct Route {
     let station: String
     let routeId: String
     let stopId: String
 }
+
+func populateRoutes() -> [Route] {
+    let calendar = Calendar.current
+    let now = Date()
+    let components = calendar.dateComponents([.hour, .minute, .weekday], from: now)
+    
+    guard let hour = components.hour, let weekday = components.weekday else {
+        return []
+    }
+    
+    var routes: [Route] = []
+    
+    // Call the function that populates the routes array based on conditions
+    addRoutes(hour: hour, weekday: weekday, routes: &routes)
+    
+    return routes
+}
+
+func addRoute(startHour: Int, endHour: Int, validWeekdays: [Int], hour: Int, weekday: Int, route: Route, routes: inout [Route]) {
+    if hour >= startHour && hour < endHour && validWeekdays.contains(weekday) {
+        routes.append(route)
+    }
+}
+
 
 func callTrainEstimateAPI(_ route: Route) async throws -> [Date] {
     // The URL of the MTA GTFS feed for the A, C, E lines
@@ -39,10 +90,10 @@ func callTrainEstimateAPI(_ route: Route) async throws -> [Date] {
     // Decode the protobuf data into the GTFSRealtime_FeedMessage model
     
     let feed = try TransitRealtime_FeedMessage(serializedBytes: data)
-
+    
     // The specific route and stop ID we're interested in
-//    let targetRouteId = "E"
-//    let targetStopId = "F09S"
+    //    let targetRouteId = "E"
+    //    let targetStopId = "F09S"
     let targetRouteId = route.routeId
     let targetStopId = route.stopId
     
@@ -51,7 +102,7 @@ func callTrainEstimateAPI(_ route: Route) async throws -> [Date] {
     
     var stops = Set<String>()
     var routeIds = Set<String>()
-
+    
     for entity in feed.entity {
         let tripUpdate = entity.tripUpdate
         routeIds.insert(entity.tripUpdate.trip.routeID)
@@ -66,8 +117,10 @@ func callTrainEstimateAPI(_ route: Route) async throws -> [Date] {
             }
         }
     }
-    print(routeIds)
-    print(stops)
+    
+    // print(routeIds)
+    // print(stops)
+    
     var estimates = [Date]()
     
     // Output the arrival times
@@ -75,7 +128,7 @@ func callTrainEstimateAPI(_ route: Route) async throws -> [Date] {
         print("No upcoming arrivals found for Route \(targetRouteId) at Stop \(targetStopId).")
         throw URLError(.badServerResponse)
     } else {
-        print("Upcoming arrivals for Route \(targetRouteId) at Stop \(targetStopId):")
+        // print("Upcoming arrivals for Route \(targetRouteId) at Stop \(targetStopId):")
         for (_, arrivalTime) in arrivalTimes.sorted().enumerated() {
             estimates.append(arrivalTime)
             if estimates.count == 2 {
@@ -94,9 +147,3 @@ func dateToString(_ date: Date) -> String {
 func datesToString(_ dates: [Date]) -> String {
     return dates.map { dateToString($0) }.joined(separator: "\n")
 }
-
-let mtaColors: [String: Color] = [
-    "7": Color.purple,
-    "E": Color.blue,
-    "M": Color.orange
-]

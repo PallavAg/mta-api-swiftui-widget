@@ -75,26 +75,7 @@ struct Provider: AppIntentTimelineProvider {
             return (["Error fetching time"], [])
         }
         
-        var routes: [Route] = []
-        
-        // Time and weekday logic to determine which routes to show
-        if (hour >= 8 && hour < 14 && weekday >= 2 && weekday <= 6) || (weekday == 7 || weekday == 1) {
-            // Weekdays 8 AM to 2 PM, and weekends (show Court Sq E)
-            routes.append(Route(station: "Court Sq (E)", routeId: "E", stopId: "F09S"))
-        }
-        if hour >= 8 && hour < 14 && weekday >= 2 && weekday <= 6 {
-            // Weekdays 8 AM to 2 PM (show Court Sq M)
-            routes.append(Route(station: "Court Sq (M)", routeId: "M", stopId: "F09S"))
-        }
-        if (hour >= 20 && hour < 23 && weekday >= 2 && weekday <= 6) || (weekday == 7 || weekday == 1) {
-            // Weekdays 8 PM to 11 PM, and weekends (show Court Sq 7)
-            routes.append(Route(station: "Court Sq (7)", routeId: "7", stopId: "719S"))
-        }
-        if hour >= 16 && hour < 20 && weekday >= 2 && weekday <= 6 {
-            // Weekdays 4 PM to 8 PM (show Lex 53rd E and M)
-            routes.append(Route(station: "Lex 53rd (E)", routeId: "E", stopId: "F11N"))
-            routes.append(Route(station: "Lex 53rd (M)", routeId: "M", stopId: "F11N"))
-        }
+        let routes: [Route] = populateRoutes()
 
         // Fetch estimates for the determined routes
         var estimates: [String] = []

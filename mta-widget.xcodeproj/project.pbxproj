@@ -27,6 +27,8 @@
 		8C6999EA2C8EA5F700D84C41 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6999E92C8EA5F700D84C41 /* SwiftProtobufPluginLibrary */; };
 		8C6999EC2C8EA60200D84C41 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6999EB2C8EA60200D84C41 /* SwiftProtobuf */; };
 		8C6999EE2C8EA60200D84C41 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6999ED2C8EA60200D84C41 /* SwiftProtobufPluginLibrary */; };
+		8C699A0F2C8F6D8100D84C41 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C699A0E2C8F6D8100D84C41 /* Config.swift */; };
+		8C699A102C8F6D8100D84C41 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C699A0E2C8F6D8100D84C41 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,7 @@
 		8C6999D42C8EA2D500D84C41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C6999D62C8EA2D500D84C41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C6999DE2C8EA39B00D84C41 /* MtaClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MtaClient.swift; sourceTree = "<group>"; };
+		8C699A0E2C8F6D8100D84C41 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 		8C6999A02C8E98E500D84C41 = {
 			isa = PBXGroup;
 			children = (
+				8C699A0E2C8F6D8100D84C41 /* Config.swift */,
 				8C6999BF2C8E9C2200D84C41 /* gtfs-realtime.pb.swift */,
 				8C6999DE2C8EA39B00D84C41 /* MtaClient.swift */,
 				8C6999AB2C8E98E500D84C41 /* mta-widget */,
@@ -272,6 +276,7 @@
 			files = (
 				8C6999AF2C8E98E500D84C41 /* ContentView.swift in Sources */,
 				8C6999E42C8EA4D000D84C41 /* gtfs-realtime.pb.swift in Sources */,
+				8C699A0F2C8F6D8100D84C41 /* Config.swift in Sources */,
 				8C6999AD2C8E98E500D84C41 /* mta_widgetApp.swift in Sources */,
 				8C6999E22C8EA41B00D84C41 /* MtaClient.swift in Sources */,
 			);
@@ -284,6 +289,7 @@
 				8C6999D12C8EA2D500D84C41 /* mta_estimate.swift in Sources */,
 				8C6999D32C8EA2D500D84C41 /* AppIntent.swift in Sources */,
 				8C6999CD2C8EA2D500D84C41 /* mta_estimateBundle.swift in Sources */,
+				8C699A102C8F6D8100D84C41 /* Config.swift in Sources */,
 				8C6999E12C8EA41B00D84C41 /* MtaClient.swift in Sources */,
 				8C6999CF2C8EA2D500D84C41 /* mta_estimateLiveActivity.swift in Sources */,
 				8C6999E62C8EA57400D84C41 /* gtfs-realtime.pb.swift in Sources */,
@@ -429,7 +435,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mta-widget/Preview Content\"";
-				DEVELOPMENT_TEAM = 6HR82J42J7;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "MTA Times";
@@ -444,7 +450,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "appilous.mta-widget";
+				PRODUCT_BUNDLE_IDENTIFIER = "mta-widget.widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -461,7 +467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mta-widget/Preview Content\"";
-				DEVELOPMENT_TEAM = 6HR82J42J7;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "MTA Times";
@@ -476,7 +482,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "appilous.mta-widget";
+				PRODUCT_BUNDLE_IDENTIFIER = "mta-widget.widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -491,7 +497,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6HR82J42J7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "mta-estimate/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "MTA Times";
@@ -503,7 +509,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "appilous.mta-widget.mta-estimate";
+				PRODUCT_BUNDLE_IDENTIFIER = "mta.mta-widget.mta-estimate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -519,7 +525,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6HR82J42J7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "mta-estimate/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "MTA Times";
@@ -531,7 +537,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "appilous.mta-widget.mta-estimate";
+				PRODUCT_BUNDLE_IDENTIFIER = "mta.mta-widget.mta-estimate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
