@@ -11,7 +11,47 @@
 		8C6999AF2C8E98E500D84C41 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6999AE2C8E98E500D84C41 /* ContentView.swift */; };
 		8C6999B12C8E98E600D84C41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C6999B02C8E98E600D84C41 /* Assets.xcassets */; };
 		8C6999B42C8E98E600D84C41 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C6999B32C8E98E600D84C41 /* Preview Assets.xcassets */; };
+		8C6999C82C8EA2D500D84C41 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6999C72C8EA2D500D84C41 /* WidgetKit.framework */; };
+		8C6999CA2C8EA2D500D84C41 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6999C92C8EA2D500D84C41 /* SwiftUI.framework */; };
+		8C6999CD2C8EA2D500D84C41 /* mta_estimateBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6999CC2C8EA2D500D84C41 /* mta_estimateBundle.swift */; };
+		8C6999CF2C8EA2D500D84C41 /* mta_estimateLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6999CE2C8EA2D500D84C41 /* mta_estimateLiveActivity.swift */; };
+		8C6999D12C8EA2D500D84C41 /* mta_estimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6999D02C8EA2D500D84C41 /* mta_estimate.swift */; };
+		8C6999D32C8EA2D500D84C41 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6999D22C8EA2D500D84C41 /* AppIntent.swift */; };
+		8C6999D52C8EA2D500D84C41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C6999D42C8EA2D500D84C41 /* Assets.xcassets */; };
+		8C6999D92C8EA2D500D84C41 /* mta-estimateExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8C6999C52C8EA2D500D84C41 /* mta-estimateExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8C6999E12C8EA41B00D84C41 /* MtaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6999DE2C8EA39B00D84C41 /* MtaClient.swift */; };
+		8C6999E22C8EA41B00D84C41 /* MtaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6999DE2C8EA39B00D84C41 /* MtaClient.swift */; };
+		8C6999E42C8EA4D000D84C41 /* gtfs-realtime.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6999BF2C8E9C2200D84C41 /* gtfs-realtime.pb.swift */; };
+		8C6999E62C8EA57400D84C41 /* gtfs-realtime.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6999BF2C8E9C2200D84C41 /* gtfs-realtime.pb.swift */; };
+		8C6999E82C8EA5F700D84C41 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6999E72C8EA5F700D84C41 /* SwiftProtobuf */; };
+		8C6999EA2C8EA5F700D84C41 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6999E92C8EA5F700D84C41 /* SwiftProtobufPluginLibrary */; };
+		8C6999EC2C8EA60200D84C41 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6999EB2C8EA60200D84C41 /* SwiftProtobuf */; };
+		8C6999EE2C8EA60200D84C41 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6999ED2C8EA60200D84C41 /* SwiftProtobufPluginLibrary */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C6999D72C8EA2D500D84C41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C6999A12C8E98E500D84C41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C6999C42C8EA2D500D84C41;
+			remoteInfo = "mta-estimateExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8C6999DD2C8EA2D500D84C41 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8C6999D92C8EA2D500D84C41 /* mta-estimateExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8C6999A92C8E98E500D84C41 /* mta-widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mta-widget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +59,17 @@
 		8C6999AE2C8E98E500D84C41 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8C6999B02C8E98E600D84C41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C6999B32C8E98E600D84C41 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8C6999BF2C8E9C2200D84C41 /* gtfs-realtime.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "gtfs-realtime.pb.swift"; sourceTree = "<group>"; };
+		8C6999C52C8EA2D500D84C41 /* mta-estimateExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "mta-estimateExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C6999C72C8EA2D500D84C41 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		8C6999C92C8EA2D500D84C41 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		8C6999CC2C8EA2D500D84C41 /* mta_estimateBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mta_estimateBundle.swift; sourceTree = "<group>"; };
+		8C6999CE2C8EA2D500D84C41 /* mta_estimateLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mta_estimateLiveActivity.swift; sourceTree = "<group>"; };
+		8C6999D02C8EA2D500D84C41 /* mta_estimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mta_estimate.swift; sourceTree = "<group>"; };
+		8C6999D22C8EA2D500D84C41 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		8C6999D42C8EA2D500D84C41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C6999D62C8EA2D500D84C41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C6999DE2C8EA39B00D84C41 /* MtaClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MtaClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +77,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C6999EE2C8EA60200D84C41 /* SwiftProtobufPluginLibrary in Frameworks */,
+				8C6999EC2C8EA60200D84C41 /* SwiftProtobuf in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C6999C22C8EA2D500D84C41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C6999EA2C8EA5F700D84C41 /* SwiftProtobufPluginLibrary in Frameworks */,
+				8C6999CA2C8EA2D500D84C41 /* SwiftUI.framework in Frameworks */,
+				8C6999C82C8EA2D500D84C41 /* WidgetKit.framework in Frameworks */,
+				8C6999E82C8EA5F700D84C41 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,7 +99,11 @@
 		8C6999A02C8E98E500D84C41 = {
 			isa = PBXGroup;
 			children = (
+				8C6999BF2C8E9C2200D84C41 /* gtfs-realtime.pb.swift */,
+				8C6999DE2C8EA39B00D84C41 /* MtaClient.swift */,
 				8C6999AB2C8E98E500D84C41 /* mta-widget */,
+				8C6999CB2C8EA2D500D84C41 /* mta-estimate */,
+				8C6999C62C8EA2D500D84C41 /* Frameworks */,
 				8C6999AA2C8E98E500D84C41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				8C6999A92C8E98E500D84C41 /* mta-widget.app */,
+				8C6999C52C8EA2D500D84C41 /* mta-estimateExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +136,28 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		8C6999C62C8EA2D500D84C41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C6999C72C8EA2D500D84C41 /* WidgetKit.framework */,
+				8C6999C92C8EA2D500D84C41 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C6999CB2C8EA2D500D84C41 /* mta-estimate */ = {
+			isa = PBXGroup;
+			children = (
+				8C6999CC2C8EA2D500D84C41 /* mta_estimateBundle.swift */,
+				8C6999CE2C8EA2D500D84C41 /* mta_estimateLiveActivity.swift */,
+				8C6999D02C8EA2D500D84C41 /* mta_estimate.swift */,
+				8C6999D22C8EA2D500D84C41 /* AppIntent.swift */,
+				8C6999D42C8EA2D500D84C41 /* Assets.xcassets */,
+				8C6999D62C8EA2D500D84C41 /* Info.plist */,
+			);
+			path = "mta-estimate";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +168,42 @@
 				8C6999A52C8E98E500D84C41 /* Sources */,
 				8C6999A62C8E98E500D84C41 /* Frameworks */,
 				8C6999A72C8E98E500D84C41 /* Resources */,
+				8C6999DD2C8EA2D500D84C41 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C6999D82C8EA2D500D84C41 /* PBXTargetDependency */,
+			);
+			name = "mta-widget";
+			packageProductDependencies = (
+				8C6999EB2C8EA60200D84C41 /* SwiftProtobuf */,
+				8C6999ED2C8EA60200D84C41 /* SwiftProtobufPluginLibrary */,
+			);
+			productName = "mta-widget";
+			productReference = 8C6999A92C8E98E500D84C41 /* mta-widget.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C6999C42C8EA2D500D84C41 /* mta-estimateExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C6999DA2C8EA2D500D84C41 /* Build configuration list for PBXNativeTarget "mta-estimateExtension" */;
+			buildPhases = (
+				8C6999C12C8EA2D500D84C41 /* Sources */,
+				8C6999C22C8EA2D500D84C41 /* Frameworks */,
+				8C6999C32C8EA2D500D84C41 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "mta-widget";
-			productName = "mta-widget";
-			productReference = 8C6999A92C8E98E500D84C41 /* mta-widget.app */;
-			productType = "com.apple.product-type.application";
+			name = "mta-estimateExtension";
+			packageProductDependencies = (
+				8C6999E72C8EA5F700D84C41 /* SwiftProtobuf */,
+				8C6999E92C8EA5F700D84C41 /* SwiftProtobufPluginLibrary */,
+			);
+			productName = "mta-estimateExtension";
+			productReference = 8C6999C52C8EA2D500D84C41 /* mta-estimateExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +218,9 @@
 					8C6999A82C8E98E500D84C41 = {
 						CreatedOnToolsVersion = 15.4;
 					};
+					8C6999C42C8EA2D500D84C41 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 				};
 			};
 			buildConfigurationList = 8C6999A42C8E98E500D84C41 /* Build configuration list for PBXProject "mta-widget" */;
@@ -111,11 +232,15 @@
 				Base,
 			);
 			mainGroup = 8C6999A02C8E98E500D84C41;
+			packageReferences = (
+				8C6999E52C8EA52D00D84C41 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
+			);
 			productRefGroup = 8C6999AA2C8E98E500D84C41 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8C6999A82C8E98E500D84C41 /* mta-widget */,
+				8C6999C42C8EA2D500D84C41 /* mta-estimateExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +255,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8C6999C32C8EA2D500D84C41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C6999D52C8EA2D500D84C41 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,11 +271,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C6999AF2C8E98E500D84C41 /* ContentView.swift in Sources */,
+				8C6999E42C8EA4D000D84C41 /* gtfs-realtime.pb.swift in Sources */,
 				8C6999AD2C8E98E500D84C41 /* mta_widgetApp.swift in Sources */,
+				8C6999E22C8EA41B00D84C41 /* MtaClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C6999C12C8EA2D500D84C41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C6999D12C8EA2D500D84C41 /* mta_estimate.swift in Sources */,
+				8C6999D32C8EA2D500D84C41 /* AppIntent.swift in Sources */,
+				8C6999CD2C8EA2D500D84C41 /* mta_estimateBundle.swift in Sources */,
+				8C6999E12C8EA41B00D84C41 /* MtaClient.swift in Sources */,
+				8C6999CF2C8EA2D500D84C41 /* mta_estimateLiveActivity.swift in Sources */,
+				8C6999E62C8EA57400D84C41 /* gtfs-realtime.pb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C6999D82C8EA2D500D84C41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C6999C42C8EA2D500D84C41 /* mta-estimateExtension */;
+			targetProxy = 8C6999D72C8EA2D500D84C41 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8C6999B52C8E98E600D84C41 /* Debug */ = {
@@ -267,6 +423,7 @@
 		8C6999B82C8E98E600D84C41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -280,6 +437,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,6 +454,7 @@
 		8C6999B92C8E98E600D84C41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -309,6 +468,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +476,62 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "appilous.mta-widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8C6999DB2C8EA2D500D84C41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HR82J42J7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "mta-estimate/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "mta-estimate";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "appilous.mta-widget.mta-estimate";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C6999DC2C8EA2D500D84C41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HR82J42J7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "mta-estimate/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "mta-estimate";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "appilous.mta-widget.mta-estimate";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -343,7 +559,50 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		8C6999DA2C8EA2D500D84C41 /* Build configuration list for PBXNativeTarget "mta-estimateExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C6999DB2C8EA2D500D84C41 /* Debug */,
+				8C6999DC2C8EA2D500D84C41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8C6999E52C8EA52D00D84C41 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-protobuf.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.28.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8C6999E72C8EA5F700D84C41 /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C6999E52C8EA52D00D84C41 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+		8C6999E92C8EA5F700D84C41 /* SwiftProtobufPluginLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C6999E52C8EA52D00D84C41 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobufPluginLibrary;
+		};
+		8C6999EB2C8EA60200D84C41 /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C6999E52C8EA52D00D84C41 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+		8C6999ED2C8EA60200D84C41 /* SwiftProtobufPluginLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C6999E52C8EA52D00D84C41 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobufPluginLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8C6999A12C8E98E500D84C41 /* Project object */;
 }
