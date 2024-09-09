@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Route {
     let station: String
@@ -77,7 +78,7 @@ func callTrainEstimateAPI(_ route: Route) async throws -> [Date] {
         print("Upcoming arrivals for Route \(targetRouteId) at Stop \(targetStopId):")
         for (_, arrivalTime) in arrivalTimes.sorted().enumerated() {
             estimates.append(arrivalTime)
-            if estimates.count == 3 {
+            if estimates.count == 2 {
                 return estimates
             }
         }
@@ -93,3 +94,9 @@ func dateToString(_ date: Date) -> String {
 func datesToString(_ dates: [Date]) -> String {
     return dates.map { dateToString($0) }.joined(separator: "\n")
 }
+
+let mtaColors: [String: Color] = [
+    "7": Color.purple,
+    "E": Color.blue,
+    "M": Color.orange
+]
